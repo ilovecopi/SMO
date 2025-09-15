@@ -1,12 +1,10 @@
-version: '3.8'
-
 services: 
     rust-web:
         build: .
         volumes:
-            - ./src:/usr/src/app
+            - ./app:/usr/src/app
             - cargo-cache:/usr/local/cargo/registry
-        workingg_dir: /usr/src/app
+        working_dir: /usr/src/app
         tty: true
         stdin_open: true
         ports:
