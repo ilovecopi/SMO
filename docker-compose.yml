@@ -1,0 +1,16 @@
+version: '3.8'
+
+services: 
+    rust-web:
+        build: .
+        volumes:
+            - .:/usr/src/app
+            - cargo-cache:/usr/local/cargo/registry
+        workingg_dir: /usr/src/app
+        tty: true
+        stdin_open: true
+        ports:
+            - "3000:3000"
+
+volumes:
+    cargo-cache:
