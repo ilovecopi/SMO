@@ -4,7 +4,7 @@ services:
     rust-web:
         build: .
         volumes:
-            - .:/usr/src/app
+            - ./src:/usr/src/app
             - cargo-cache:/usr/local/cargo/registry
         workingg_dir: /usr/src/app
         tty: true
