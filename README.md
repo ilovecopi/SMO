@@ -5,7 +5,7 @@
 - CI/CD: AWS Amplify, GitHub Actions
 
 ## Yewチュートリアルの注意点
-- GitHub の最新版を Cargo.toml に指定する必要あり。'version = "0.21"'では、main.rsでコンパイルエラーが起きる。
+- GitHub の最新版を Cargo.toml に指定する必要あり。`version = "0.21"`では、main.rsでコンパイルエラーが起きる。
 ```bash
 cargo add yew
 # 'component'がimportされずコンパイルエラーが起きる
@@ -15,6 +15,7 @@ cargo add yew
 [dependencies]
 # cargo addを使わずにファイル更新でgitのurlを指定
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+# yew = { version = "0.21", features = ["csr"] } => error in main.rs
 ```
 
 - Docker環境でTrunkを使う場合は `trunk serve --address 0.0.0.0` 
