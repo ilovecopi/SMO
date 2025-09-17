@@ -1,0 +1,23 @@
+# Rust build
+/target/
+
+# Trunk build output
+/dist/
+
+# Node modules (if using npm/yarn)
+node_modules/
+
+# macOS system files
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# JetBrains settings
+.idea/
+
+# Log files
+*.log
+
+# Optional: if you use dotenv
+.env
