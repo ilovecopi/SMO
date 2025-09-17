@@ -1,14 +1,21 @@
 services: 
     rust-web:
-        build: .
+
+        build: ./app
+
         volumes:
             - ./app:/usr/src/app
             - cargo-cache:/usr/local/cargo/registry
+            - target-cache:/usr/src/app/target
+
         working_dir: /usr/src/app
+
         tty: true
         stdin_open: true
+
         ports:
-            - "3000:3000"
+            - "8080:8080"
 
 volumes:
     cargo-cache:
+    target-cache:
